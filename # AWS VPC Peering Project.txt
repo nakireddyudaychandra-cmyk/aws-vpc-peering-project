@@ -1,0 +1,36 @@
+# AWS VPC Peering Project
+
+## Overview
+
+Created and tested VPC Peering between two AWS VPCs.
+
+## VPC Configuration
+
+### VPC-A
+- CIDR: 10.0.0.0/16
+- EC2 Private IP: 10.0.1.209
+
+### VPC-B
+- CIDR: 20.0.0.0/16
+- EC2 Private IP: 20.0.2.126
+
+## Configuration Steps
+
+1. Created two VPCs.
+2. Created EC2 instances in both VPCs.
+3. Created a VPC Peering Connection.
+4. Accepted the peering request.
+5. Added routes to both VPC route tables.
+6. Configured Security Groups.
+7. Tested communication between the EC2 instances.
+
+## Testing
+
+From VPC-A EC2:
+
+```bash
+ping 20.0.2.126
+
+Result:
+
+64 bytes from 20.0.2.126
